@@ -11,7 +11,7 @@ python==3.8
 pytorch==1.9.0 [for Deep Learning]  
 koNLPy==0.5.2
 tqdm
-transformers
+transformers==3.1.0
 jpype1
 
 ```
