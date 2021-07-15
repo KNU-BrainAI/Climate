@@ -151,6 +151,155 @@ for i in range(10):
 
 #네트워크 학습 
 
+#softmax와 적합한 loss function
+criterion = nn.NLLLoss()
+
+
+learning_rate = 0.005 # 너무 높으면 발산할 수 있고, 너무 낮으면 학습이 안 될 수 있습니다 
+
+def train(category_tensor, line_tensor):
+    hidden = rnn.initHidden() 
+    
+    rnn.zero_grad() 
+    
+    for i in range(line_tensor.size()[0]):
+        output, hidden = rnn(line_tensor[i], hidden)
+        
+    loss = criterion(output, category_tensor)
+    loss.backward()
+    
+    for p in rnn.parameters():
+        p.data.add_(p.grad.data, alpha=-learning_rate)
+        
+    return output, loss.item() 
+
+#예시 데이터를 사용하여 실행 
+import time 
+import math 
+
+n_iters = 100000 
+print_every = 5000 
+plot_every = 1000 
+
+
+
+#도식화를 위한 손실 추적 
+current_loss = 0 
+all_losses = [] 
+
+def timeSince(since):
+    now = time.time() 
+    s = now - since 
+    m = math.floor(s / 60)
+    s -= m * 60 
+    return '%dm %ds' % (m,s)
+
+start = time.time() 
+
+
+for iter in range(1, n_iters + 1):
+    category, line, category_tensor, line_tensor = randomTrainingExample()
+    output, loss = train(category_tensor, line_tensor)
+    current_loss += loss 
+    
+    
+    #iter 숫자, 손실, 이름, 추측 화면 출력 
+    if iter % print_every ==0:
+        guess, guess_i = categoryFromOutput(output)
+        correct = '✓' if guess == category else '✗ (%s)' % category
+        print('%d %d%% (%s) %.4f %s / %s %s' % (iter, iter/n_iters *100, timeSince(start), loss, line, guess, correct))
+    
+    if iter % plot_every == 0: 
+        all_losses.append(current_loss / plot_every)
+        current_loss = 0 
+        
+
+#결과 도식화 
+## all_losses 를 이용한 손실 도식화는 네트워크 학습을 보여준다 
+
+import matplotlib.pyplot as plt 
+import matplotlib.ticker as ticker 
+
+plt.figure()
+plt.plot(all_losses)
+
+
+#결과 평가 
+## Confusion Matrix 
+
+confusion = torch.zeros(n_categories, n_categories)
+n_confusion = 10000 
+
+#주어진 라인의 출력 반환 
+def evaluate(line_tensor):
+    hidden = rnn.initHidden()
+    
+    for i in range(line_tensor.size()[0]):
+        output, hidden = rnn(line_tensor[i], hidden)
+        
+    return output 
+
+# 예시들 중 어떤 것이 정확하게 예측되었는지 기록
+for i in range(n_confusion):
+    category, line, category_tensor, line_tensor = randomTrainingExample()
+    output = evaluate(line_tensor)
+    guess, guess_i = categoryFromOutput(output)
+    category_i = all_categories.index(category)
+    confusion[category_i][guess_i] += 1
+    
+# 모든 행을 합계로 나누어 정규화
+for i in range(n_categories):
+    confusion[i] = confusion[i] / confusion[i].sum()
+
+
+#도식 설정 
+fig = plt.figure() 
+ax = fig.add_subplot(111)
+cax = ax.matshow(confusion.numpy())
+fig.colorbar(cax)    
+
+#축 설정 
+ax.set_xticklabels([''] + all_categories, rotation=90)
+ax.set_yticklabels([''] + all_categories)
+
+
+# 모든 tick에서 레이블 지정
+ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
+ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
+
+# sphinx_gallery_thumbnail_number = 2
+plt.show()
+
+
+# Application 
+# 사용자 입력으로 실행 
+
+
+def predict(input_line, n_predictions=3):
+    print('\n> %s' % input_line)
+    with torch.no_grad():
+        output = evaluate(lineToTensor(input_line))
+        
+        #Get top N categories 
+        topv, topi = output.topk(n_predictions, 1, True)
+        predictions = [] 
+        
+        for i in range(n_predictions):
+            value = topv[0][i].item() 
+            category_index = topi[0][i].item() 
+            print('(%.2f) %s' % (value, all_categories[category_index]))
+            predictions.append([value, all_categories[category_index]])
+
+
+predict('Dovesky')
+predict('Jackson')
+predict('Aaron')
+predict('Lee')
+predict('Yamamoto')
+predict('Zhang')
+
+
+
 
 
 
