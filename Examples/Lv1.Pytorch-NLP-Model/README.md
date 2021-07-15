@@ -14,4 +14,4 @@ https://tutorials.pytorch.kr/intermediate/char_rnn_classification_tutorial.html
 ### Output: 
 
 <img src="images/output1.png">  
-<img src="images/output2.png">  
+<img src="images/output2.PNG">  
