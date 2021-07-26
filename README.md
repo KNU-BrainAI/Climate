@@ -16,13 +16,14 @@
 ### requirements  
 
 ```python
-cuda==10.2  
+# it's Our version!  
+cudatoolkit==11.3.1  
 cudnn==?  
-python==3.8
-pytorch==1.9.0 [for Deep Learning]  
+python==3.8.0
+pytorch==1.9.0 
+tensorflow-gpu==2.5.0
 koNLPy==0.5.2
 tqdm
-transformers==3.1.0
-jpype1
-
+transformers==4.8.2
+spyder==5.0.5  
 ```
