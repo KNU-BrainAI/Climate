@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-BERT 0721
+BERT ver 0726
+
 @author: PC
 """
 
