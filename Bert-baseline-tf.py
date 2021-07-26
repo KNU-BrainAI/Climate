@@ -57,9 +57,9 @@ train_001 = train[:(len(train)//10)]
 test_001 = test[:(len(test)//10)]
 sample_submission_001 = sample_submission[:len(sample_submission)//10]
 
-train_001.to_csv('data/dacon-data/train_001.csv')
-test_001.to_csv('data/dacon-data/test_001.csv')
-sample_submission_001.to_csv('data/dacon-data/sample_submission_001.csv')
+train_001.to_csv('data/dacon-data/train_001.csv', encoding="utf-8-sig")
+test_001.to_csv('data/dacon-data/test_001.csv', encoding="utf-8-sig")
+sample_submission_001.to_csv('data/dacon-data/sample_submission_001.csv', encoding="utf-8-sig")
 '''
 
 
