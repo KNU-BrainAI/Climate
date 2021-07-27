@@ -18,7 +18,7 @@
 ```python
 # it's Our version!  
 cudatoolkit==11.3.1  
-cudnn==?  
+cudnn==8.2.1
 python==3.8.0
 pytorch==1.9.0 
 tensorflow-gpu==2.5.0
