@@ -8,9 +8,9 @@
 
 ### Examples (공부했던 예제 기록) 
 
-1. First Name('성')을 분석하여 어느 나라 출신인지 예측하는 모델 | https://tutorials.pytorch.kr/intermediate/char_rnn_classification_tutorial.html  
-2. 뉴스 기사 문장을 [1. 세계, 2.스포츠 3. 경제 4. 과학] 분류하기 , Pytorch TorchText 사용 | https://tutorials.pytorch.kr/beginner/text_sentiment_ngrams_tutorial.html  
-3. Kaggle 악플 분석 챌린지 | https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/code  
+1. [First Name('성')을 분석하여 어느 나라 출신인지 예측하는 모델](https://tutorials.pytorch.kr/intermediate/char_rnn_classification_tutorial.html)  
+2. [뉴스 기사 문장을 [1. 세계, 2.스포츠 3. 경제 4. 과학] 분류하기 , Pytorch TorchText 사용](https://tutorials.pytorch.kr/beginner/text_sentiment_ngrams_tutorial.html)  
+3. [Kaggle 악플 분석 챌린지](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/code)  
 
 
 ### requirements  
