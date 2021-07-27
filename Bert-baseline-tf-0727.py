@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-BERT 0726
+BERT 0727 : 0.57695점 
 @author: PC
 """
 
