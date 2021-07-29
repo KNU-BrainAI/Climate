@@ -194,11 +194,11 @@ class TFBertClassifier(tf.keras.Model):
         self.dropout = tf.keras.layers.Dropout(self.bert.config.hidden_dropout_prob)
         '''
         D_in, H, D_out = 
-        '''
+        
         self.classifier = tf.keras.layers.Dense(num_class, 
                                                 kernel_initializer=tf.keras.initializers.TruncatedNormal(self.bert.config.initializer_range), 
                                                 name="classifier")
-        
+        '''
         model_eunchan = tf.keras.models.Sequential()
         model_eunchan.add(tf.keras.layers.Dense(100, 
                                                 kernel_initializer=tf.keras.initializers.TruncatedNormal(self.bert.config.initializer_range), 
