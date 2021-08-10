@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jul 26 15:21:40 2021
 
-@author: PC
+
+Output : 0데이터 모두(13만~) + 나머지 데이터 oversample = 총 train 데이터 29만개 
+
+'과제명', '요약문_연구목표', '요약문_연구내용','요약문_기대효과','요약문_한글키워드' 
+
 """
 
 import pandas as pd
@@ -39,22 +42,7 @@ train=train[['data','label']]
 test=test['data']
 
 
-'''
-train=train[['과제명', '요약문_연구목표', 'label']]
-test=test[['과제명', '요약문_연구목표']]
-train['요약문_연구목표'].fillna('NAN', inplace=True)
-test['요약문_연구목표'].fillna('NAN', inplace=True)
 
-train['data']=train['과제명']+train['요약문_연구목표']
-test['data']=test['과제명']+test['요약문_연구목표']
-
-
-train=train[['data','label']]
-test=test['data']
-
-
-'''
-# label 0 5천개 
 
 sample_0 = [] 
 cnt = 0
@@ -105,16 +93,10 @@ apeach.columns = ['data', 'label']
 
 ryan.to_csv("train_preproc_0809.csv",encoding="utf-8-sig")
 
+#굳이 안써도 될듯 
 #apeach.to_csv("balance_dataset_0809.csv",encoding="utf-8-sig")
 
 test.to_csv("test_preproc_0809.csv",encoding="utf-8-sig")
-
-
-
-#train_over_sample
-
-
-
 
 
 
