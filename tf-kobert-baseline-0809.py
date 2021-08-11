@@ -245,8 +245,8 @@ classification_model.compile(optimizer=optimizer, loss=loss, metrics=[metric])
 
 os_model_name = "KoBERT-Climate-0808"
 
-#earlystop_callback = EarlyStopping(monitor='val_accuracy', min_delta=0.0001,patience=5)
-earlystop_callback = EarlyStopping(monitor='val_f1', min_delta=0.0001,patience=5)
+earlystop_callback = EarlyStopping(monitor='val_accuracy', min_delta=0.0001,patience=5)
+#earlystop_callback = EarlyStopping(monitor='val_f1', min_delta=0.0001,patience=5)
 
 
 checkpoint_path = os.path.join(os_model_name, 'weights.h5')
