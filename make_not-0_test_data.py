@@ -47,7 +47,7 @@ for i in range(len(submission_ans)):
 
 
 
-
+ 
 submission_ans.to_csv("submission_2중분류_ans_0812은찬1.csv",encoding="utf-8-sig",index=False)
 
 
