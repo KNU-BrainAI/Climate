@@ -25,13 +25,13 @@ from konlpy.tag import Okt
 
 submission = pd.read_csv('KOBERT-binary_Submission_0812_5epoch.csv')
 
-submission_2 = pd.read_csv('notzero-Submission_0812_1epoch.csv')
+#submission_2 = pd.read_csv('notzero-Submission_0812_1epoch.csv')
 
-submission_ans = pd.read_csv('KOBERT-binary_Submission_0812_5epoch.csv')
+#submission_ans = pd.read_csv('KOBERT-binary_Submission_0812_5epoch.csv')
 
 test=pd.read_csv('test_preproc_0809.csv')
 
-sample_submission=pd.read_csv('data/dacon-data/sample_submission.csv')
+#sample_submission=pd.read_csv('data/dacon-data/sample_submission.csv')
 
 notzero_label = [] 
 
