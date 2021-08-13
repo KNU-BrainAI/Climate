@@ -2,8 +2,7 @@
 """
 
 
-
-0/1 분류 csv 를 인풋으로 하여 여기서 1이 나왔던 데이터를 test-set , submission-set으로 만들어주는 코드 
+0/1~45를 분류 1차 분류한(0/1) csv file을 입력으로하여 여기서 1이 나왔던 데이터를 test-set , submission-set으로 만들어주는 코드 
 make Not Zero test data 
 
 @author: PC
