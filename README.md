@@ -14,14 +14,11 @@ To Be Updated ..
 
 ### Members 
 
-|이름|Github|pictures|
-|:---|:---|:---:|
-|이창현|[@2changhyeon](https://github.com/2changhyeon)|<img src="dacon_3.png">|
-|이은찬|[@purang2](https://github.com/purang2)|중앙정렬|
-
-이창현  
-이은찬  
-
+|이름|Github|
+|:---|:---|
+|이창현|[@2changhyeon](https://github.com/2changhyeon)|
+|이은찬|[@purang2](https://github.com/purang2)|
+ 
 
 ### Works 
 
