@@ -9,6 +9,7 @@
 - 12 Train columns 중 4가지 '과제명', '요약문_한글키워드', '요약문_연구목표', 'label' 사용 
 - **Mecab Tokenizer**를 통해 형태소 단위 분절 후 **명사형태만 추출하는 방식**을 최종 적용
 
+<img src="images/after_preproc.PNG">
 
 
 
