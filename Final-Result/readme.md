@@ -2,7 +2,9 @@
 
 --- 
 ## Models 
-|filename|Model|설명|
+
+|Filename|Model|설명|
+|------|---|---|
 |**Model1**|BERT|10 Epochs|
 |**Model2**|KoBERT|10 Epochs|
 |**Model3**|RoBERTa-base|10 Epochs|
