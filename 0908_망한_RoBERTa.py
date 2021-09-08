@@ -5,6 +5,11 @@
 모델링 코드 짜기
 옵티마이저 통일 
 model3 : RoBERTa-base
+
+
+
+#09/08 Refs 
+https://www.kaggle.com/msafi04/tensorflow-roberta-commonlit-readability
 """
 
 import pandas as pd
