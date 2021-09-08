@@ -124,11 +124,11 @@ train_input_ids=np.array(input_ids, dtype=int)
 train_attention_masks=np.array(attention_masks, dtype=int)
 train_token_type_ids=np.array(token_type_ids, dtype=int)
 
-
+'''
 train_input_ids = train_input_ids[:,0,:]
 train_attention_masks = train_attention_masks[:,0,:]
 train_token_type_ids = train_token_type_ids[:,0,:]
-
+'''
 
 train_inputs=(train_input_ids, train_attention_masks, train_token_type_ids)
 train_labels=np.asarray(train_data_labels, dtype=np.int32)
@@ -241,11 +241,11 @@ test_attention_masks=np.array(attention_masks, dtype=int)
 test_token_type_ids=np.array(token_type_ids, dtype=int)
 ###########################################################
 
-
+'''
 test_input_ids = test_input_ids[:,0,:]
 test_attention_masks = test_attention_masks[:,0,:]
 test_token_type_ids = test_token_type_ids[:,0,:]
-
+'''
 
 test_inputs=(test_input_ids, test_attention_masks, test_token_type_ids)
 
