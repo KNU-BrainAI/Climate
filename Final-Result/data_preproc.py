@@ -85,8 +85,8 @@ test = pd.DataFrame(test_data)
 
 
 ## missing value filling 0
-train = train.fillna('missing')
-test = test.fillna('missing')
+train = train.fillna('missing',inplace=True)
+test = test.fillna('missing',inplace=True)
 
 
 test.columns = ['data']
