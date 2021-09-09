@@ -81,6 +81,14 @@ for x in range(len(test)):
     
 test = pd.DataFrame(test_data)
 
+
+
+
+## missing value filling 0
+train = train.fillna('missing')
+test = test.fillna('missing')
+
+
 test.columns = ['data']
 train.to_csv('train_preproc.csv',index=False,encoding="utf-8-sig")
 test.to_csv('test_preproc.csv',index=False,encoding="utf-8-sig")
