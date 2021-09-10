@@ -17,7 +17,7 @@
 
 |Filename|Model|설명|F1 스코어|
 |------|---|---|---|
-|**Model1**|BERT|Fixed-Parameter|---|
+|**Model1**|BERT|Fixed-Parameter|0.64159|
 |**Model2**|KoBERT|Fixed-Parameter|---|
 |**Model3**|RoBERTa-base|Fixed-Parameter|---|
 |**Model4**|XLM-RoBERTa-base|Fixed-Parameter|---|
