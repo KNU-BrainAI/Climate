@@ -21,7 +21,7 @@
 |**Model2**|KoBERT|Fixed-Parameter|---|
 |**Model3**|RoBERTa-base|Fixed-Parameter|---|
 |**Model4**|XLM-RoBERTa-base|Fixed-Parameter|---|
-|**Model5**|?|---|
+|**Model5**|KLUE-RoBERTa|Fixed-Parameter|---|
 |**앙상블 Model1**|?|Fixed-Parameter|---|
 |**앙상블 Model2**|?|Fixed-Parameter|---|
 
