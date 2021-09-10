@@ -47,7 +47,6 @@ test=test['data']
 
 
 
-
 import math 
 
 #train = train[:100]
@@ -62,9 +61,9 @@ for x in range(len(train)):
     for i in range(len(target_nouns)):
         target_x = target_x + " " + target_nouns[i]
     
-    
+    if target_x == "": train_data.append("없음")
    
-    train_data.append(target_x)
+    else: train_data.append(target_x)
         
         
 train['data'] = train_data
@@ -85,8 +84,10 @@ for x in range(len(test)):
         target_x = target_x + " " + target_nouns[i]
         
         
+    if target_x == "": test_data.append("없음")
+   
+    else: test_data.append(target_x)
     
-    test_data.append(target_x)
     
 test = pd.DataFrame(test_data)
 
