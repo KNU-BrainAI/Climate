@@ -15,13 +15,19 @@
 
 ## Models 
 
+**Single Models**  
 |Filename|Model|설명|F1 스코어|
-|------|---|---|---|
-|**Model1**|BERT|Fixed-Parameter|0.64159|
-|**Model2**|KoBERT|Fixed-Parameter|0.66650|
-|**Model3**|RoBERTa-base|Fixed-Parameter|---|
-|**Model4**|XLM-RoBERTa-base|Fixed-Parameter|---|
-|**Model5**|KLUE-RoBERTa|Fixed-Parameter|---|
+|------|------|---|---|
+|**Model1**|BERT-base-Multilingual-cased|Fixed-Parameter|0.64159|
+|**Model2**|BERT-base-Multilingual-uncased|Fixed-Parameter|---|
+|**Model3**|KoBERT/monologg|Fixed-Parameter|0.66650|
+|**Model4**|KLUE-RoBERTa-large|Fixed-Parameter|---|
+|**Model5**|KLUE-RoBERTa-base|Fixed-Parameter|---|
+|**Model6**|KoELECTRA-base-v3-discriminator|Fixed-Parameter|---|
+
+**Ensemble Models**  
+|Filename|Model|설명|F1 스코어|
+|------|------|---|---|
 |**앙상블 Model1**|?|Fixed-Parameter|---|
 |**앙상블 Model2**|?|Fixed-Parameter|---|
 
