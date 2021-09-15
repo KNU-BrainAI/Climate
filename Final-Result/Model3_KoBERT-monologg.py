@@ -9,7 +9,7 @@
 옵티마이저 통일 
 
 
-model2 : KoBERT 
+Model3	KoBERT-monologg
 
 
 """
