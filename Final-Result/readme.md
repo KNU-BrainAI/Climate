@@ -23,7 +23,8 @@
 |**Model3**|KoBERT/monologg|Fixed-Parameter|0.66650|
 |**Model4**|KLUE-RoBERTa-large|Fixed-Parameter|---|
 |**Model5**|KLUE-RoBERTa-base|Fixed-Parameter|---|
-|**Model6**|KoELECTRA-base-v3-discriminator|Fixed-Parameter|---|
+|**Model6**|KLUE-BERT-base|Fixed-Parameter|---|
+|**Model7**|KoELECTRA-base-v3-discriminator|Fixed-Parameter|---|
 
 
 **uncased**: it does not make a difference between english and English.  
