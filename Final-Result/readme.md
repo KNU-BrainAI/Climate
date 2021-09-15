@@ -16,7 +16,7 @@
 ## Models 
 
 **Single Models**  
-|Filename|Model|설명|F1 스코어|
+|Filename|Model|Details|Macro F1|
 |------|------|---|---|
 |**Model1**|BERT-base-Multilingual-cased|Fixed-Parameter|0.64159|
 |**Model2**|BERT-base-Multilingual-uncased|Fixed-Parameter|---|
