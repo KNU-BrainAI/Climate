@@ -10,7 +10,7 @@
 
 
 
-model1 : BERT 
+model1 : BERT-base-Multilingual-cased 
 
 
 """
