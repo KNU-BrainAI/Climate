@@ -27,7 +27,7 @@
 |**Model7**|KoELECTRA-base-v3-discriminator|Fixed-Parameter|---|
 
 
-**uncased**: it does not make a difference between english and English.  
+***uncased**: it does not make a difference between english and English.  
 
 **Ensemble Models**  
 |Filename|Model|설명|F1 스코어|
