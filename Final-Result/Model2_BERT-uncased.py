@@ -61,7 +61,7 @@ sample_submission=pd.read_csv('data/dacon-data/sample_submission.csv')
 
 
 #tokenizer = BertTokenizer.from_pretrained('monologg/kobert') # monologg/distilkobert도 동일
-tokenizer=BertTokenizer.from_pretrained('bert-base-multilingual-uncased',  cache_dir='bert_ckpt', do_lower_case=False)
+tokenizer=BertTokenizer.from_pretrained('bert-base-multilingual-uncased')
 bert_model = TFBertModel.from_pretrained('bert-base-multilingual-uncased', from_pt=True)
 
 
