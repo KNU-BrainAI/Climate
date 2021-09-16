@@ -1,18 +1,10 @@
 # -*- coding: utf-8 -*-
+
 """
-
-
 09/15 화요일 
-
 모델링 코드 짜기
-
 옵티마이저 통일 
-
-
-
 model2 : BERT-base-Multilingual-uncased 
-
-
 """
 
 import pandas as pd
@@ -55,8 +47,7 @@ MAX_LEN=96
 
 train= pd.read_csv('train_preproc.csv')
 test=pd.read_csv('test_preproc.csv')
-sample_submission=pd.read_csv('data/dacon-data/sample_submission.csv')
-
+sample_submission=pd.read_csv('sample_submission.csv')
 
 
 
@@ -82,11 +73,6 @@ def bert_tokenizer(text, MAX_LEN):
     token_type_id = encoding['token_type_ids']
     
     return input_id, attention_mask, token_type_id
-
-
-
-
-
 
 
 
@@ -248,11 +234,10 @@ test_token_type_ids = test_token_type_ids[:,0,:]
 
 test_inputs=(test_input_ids, test_attention_masks, test_token_type_ids)
 
-
 results = classification_model.predict(test_inputs)
 results=tf.argmax(results, axis=1)
-
 
 sample_submission['label']=results
 
 sample_submission.to_csv('Model2: BERT-base-multilingual-uncased-Submission.csv', index=False)
+
