@@ -80,9 +80,10 @@ def bert_tokenizer(text, MAX_LEN):
     
     input_id = encoding["input_ids"]   
     attention_mask = encoding["attention_mask"]
-    token_type_id = encoding['token_type_ids']
+    #token_type_id = encoding['token_type_ids']
     
-    return input_id, attention_mask, token_type_id
+    #return input_id, attention_mask, token_type_id
+    return input_id, attention_mask
 
 
 
@@ -104,11 +105,12 @@ train_data_labels = []
 
 for train_sent, train_label in zip(train['data'], train['label']):
     try:
-        input_id, attention_mask, token_type_id = bert_tokenizer(train_sent, MAX_LEN=MAX_LEN)
+        #input_id, attention_mask, token_type_id = bert_tokenizer(train_sent, MAX_LEN=MAX_LEN)
+        input_id, attention_mask = bert_tokenizer(train_sent, MAX_LEN=MAX_LEN)
         
         input_ids.append(input_id)
         attention_masks.append(attention_mask)
-        token_type_ids.append(token_type_id)
+        #token_type_ids.append(token_type_id)
         #########################################
         train_data_labels.append(train_label)
         
@@ -122,7 +124,7 @@ for train_sent, train_label in zip(train['data'], train['label']):
 
 train_input_ids=np.array(input_ids, dtype=int)
 train_attention_masks=np.array(attention_masks, dtype=int)
-train_token_type_ids=np.array(token_type_ids, dtype=int)
+#train_token_type_ids=np.array(token_type_ids, dtype=int)
 
 '''
 train_input_ids = train_input_ids[:,0,:]
@@ -130,7 +132,8 @@ train_attention_masks = train_attention_masks[:,0,:]
 train_token_type_ids = train_token_type_ids[:,0,:]
 '''
 
-train_inputs=(train_input_ids, train_attention_masks, train_token_type_ids)
+#train_inputs=(train_input_ids, train_attention_masks, train_token_type_ids)
+train_inputs=(train_input_ids, train_attention_masks)
 train_labels=np.asarray(train_data_labels, dtype=np.int32)
 
 
@@ -150,7 +153,8 @@ class BertModel_byBrainAILAB(tf.keras.Model):
     def call(self, inputs, attention_mask=None, token_type_ids=None, training=False):
         
         #outputs 값: # sequence_output, pooled_output, (hidden_states), (attentions)
-        outputs = self.bert(inputs, attention_mask=attention_mask, token_type_ids=token_type_ids)
+        #outputs = self.bert(inputs, attention_mask=attention_mask, token_type_ids=token_type_ids)
+        outputs = self.bert(inputs, attention_mask=attention_mask)
         pooled_output = outputs[1] 
         pooled_output = self.dropout(pooled_output, training=training)
         logits = self.classifier(pooled_output)
@@ -222,11 +226,12 @@ train_data_labels = []
 for test_sent in test['data']:
     try:
         #input_id, attention_mask, token_type_id = bert_tokenizer(clean_text(test_sent), MAX_LEN=40)
-        input_id, attention_mask, token_type_id = bert_tokenizer(test_sent, MAX_LEN=MAX_LEN)
+        #input_id, attention_mask, token_type_id = bert_tokenizer(test_sent, MAX_LEN=MAX_LEN)
+        input_id, attention_mask = bert_tokenizer(test_sent, MAX_LEN=MAX_LEN)
         
         input_ids.append(input_id)
         attention_masks.append(attention_mask)
-        token_type_ids.append(token_type_id)
+        #token_type_ids.append(token_type_id)
         #########################################
        
     except Exception as e:
@@ -238,7 +243,7 @@ for test_sent in test['data']:
 
 test_input_ids=np.array(input_ids, dtype=int)
 test_attention_masks=np.array(attention_masks, dtype=int)
-test_token_type_ids=np.array(token_type_ids, dtype=int)
+#test_token_type_ids=np.array(token_type_ids, dtype=int)
 ###########################################################
 
 '''
@@ -247,7 +252,8 @@ test_attention_masks = test_attention_masks[:,0,:]
 test_token_type_ids = test_token_type_ids[:,0,:]
 '''
 
-test_inputs=(test_input_ids, test_attention_masks, test_token_type_ids)
+#test_inputs=(test_input_ids, test_attention_masks, test_token_type_ids)
+test_inputs=(test_input_ids, test_attention_masks)
 
 
 results = classification_model.predict(test_inputs)
