@@ -4,7 +4,7 @@
 09/15 SOO요일 
 모델링 코드 짜기
 옵티마이저 통일 
-model: KLUE ROBERTA base 
+model 4 : KLUE ROBERTA Large
 """
 
 import pandas as pd
