@@ -178,7 +178,7 @@ classification_model.compile(optimizer=optimizer, loss=loss, metrics=[metric])
 
 
 
-os_model_name = "BERT-Climate_m2"
+os_model_name = "koBERT-Climate_m23"
 
 #earlystop_callback = EarlyStopping(monitor='val_accuracy', min_delta=0.0001,patience=5)
 earlystop_callback = EarlyStopping(monitor='val_accuracy', min_delta=0.0001,patience=5)
@@ -253,4 +253,4 @@ results=tf.argmax(results, axis=1)
 
 sample_submission['label']=results
 
-sample_submission.to_csv('Model2: BERT-base-multilingual-uncased-Submission.csv', index=False)
+sample_submission.to_csv('SKT-KoBERT-Submission.csv', index=False)
