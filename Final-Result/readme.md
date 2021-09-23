@@ -24,7 +24,8 @@
 |**Model4**|KLUE-RoBERTa-large|Fixed-Parameter|---|
 |**Model5**|KLUE-RoBERTa-base|Fixed-Parameter|---|
 |**Model6**|KLUE-BERT-base|Fixed-Parameter|---|
-|**Model7**|KoELECTRA-base-v3-discriminator|Fixed-Parameter|---|
+|**Model7**|KoELECTRA-base-v3-discriminator|Fixed-Parameter|---|  
+|**Model9**|SKT-KoBERT(cased)|Fixed-Parameter|---|
 
 
 ***uncased**: it does not make a difference between english and English.  
