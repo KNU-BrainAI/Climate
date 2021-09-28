@@ -141,7 +141,7 @@ classification_model.compile(optimizer=optimizer, loss=loss, metrics=[metric])
 
 
 
-os_model_name = "k-ELECTRA-Ko"
+os_model_name = "k-ELECTRA-Ko-small"
 
 earlystop_callback = EarlyStopping(monitor='val_accuracy', min_delta=0.0001,patience=5)
 
@@ -206,5 +206,5 @@ results=tf.argmax(results, axis=1)
 
 sample_submission['label']=results
 
-sample_submission.to_csv('M11-KoELECTRA-base-Submission_TEST.csv', index=False)
+sample_submission.to_csv('M11-KoELECTRA-base-Submission-0928.csv', index=False)
 
