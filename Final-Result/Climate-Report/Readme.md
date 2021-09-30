@@ -31,10 +31,33 @@ ICT Express https://www.journals.elsevier.com/ict-express
 ## 1. INTRODUCTION (연구 소개)  
 
 **1.1 Deep Learning**  
+The Deep Learning refers to stack a lot of Neural Networks Deeply~~~~~~~. 
+
+(중략) ..  
+
+
+Natural Language Processing (NLP) is ~~~.
+
+
 
 **1.2. NLP**  
 
-**1.3. Classification**   
+NLP is 인기가 많아지기 시작한 기술이다. 
+
+Natural Language를 타겟으로 한다. 
+
+Word Embedding 기법을 통해서 자연어의 연관관계를 벡터로 나타내고 이를 이용하여 딥러닝 네트워크는 다양한 자연어 처리 태스크에서 좋은 성능을 보일 수 있습니다. ~~~ 쏼라쏼라(더 적읍시다) ~~~~
+
+**1.3. Classification** 
+
+전통적으로 행해져 왔던 머신러닝의 큰 분야인 Classification은 ~~~~ 입니다. 
+
+이는 딥러닝에서도 마찬가지로 매우 보편적인 태스크이며 널리 쓰이고 있습니다
+
+자연어 처리에서도 스팸 분류 영화 리뷰 긍정 부정 분류 등에서 딥러닝 네트워크를 통한 자연어 처리를 가능하게 할 수 있습니다.
+
+~~~(더적기)
+
 
 **1.4. Language Models**  
 
