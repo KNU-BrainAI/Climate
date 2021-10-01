@@ -72,12 +72,23 @@ Word Embedding 기법을 통해서 자연어의 연관관계를 벡터로 나타
 
 **1.4. Language Models**  
 
+- Language Model의 정의:~~
 
+- 어텐션과 트랜스포머에 대한 인트로
+
+- BERT 
+
+
+- RoBERTa
+
+
+- ELECTRA 
+- 
 
 
 **⭐1.5. Objective (연구 목적)**  
 
-BERT와 같은 프리트레인 모델은 
+BERT와 같은 프리트레인 모델은 NLP Tasks의 성능을 끌어올리는 데에 공헌을 하였
 
 
 
