@@ -37,7 +37,7 @@
 |**앙상블 Model2**|?|Fixed-Parameter|---|
 
 
-## Fixed-Parameter
+## Hyperparameters (Fixed)
 
 ```(python)
 NUM_EPOCHS = 10
