@@ -29,7 +29,7 @@ ICT Express https://www.journals.elsevier.com/ict-express
 ---
 
 ## 1. INTRODUCTION (연구 소개)  
-
+<!--
 **1.1 Deep Learning**  
 
 
@@ -91,8 +91,8 @@ Word Embedding 기법을 통해서 자연어의 연관관계를 벡터로 나타
 - ELECTRA 
 - 
 
-
-**⭐1.5. Objective (연구 목적)**  
+-->
+**⭐ Objective (연구 목적)**  
 
 BERT와 같은 프리트레인 모델은 NLP Tasks의 성능을 끌어올리는 데에 공헌을 하였
 
@@ -162,14 +162,13 @@ metric = tf.keras.metrics.SparseCategoricalAccuracy('accuracy')
 |**Model #1**|BERT-base-Multilingual-cased|Fixed-Parameter|0.65340|0.64159|
 |**Model #2**|BERT-base-Multilingual-uncased|Fixed-Parameter|0.70660|0.68062|
 |**Model #3**|KLUE-BERT-base|Fixed-Parameter|0.74360|0.72007|
-|**Model #4**|SKT-KoBERT(cased)|Fixed-Parameter|---|---|
-|**Model #5**|KoBERT/monologg|Fixed-Parameter|0.67256|0.66650|
-|**Model #6**|RoBERTa-base|Fixed-Parameter|0.59196|0.56519|
-|**Model #7**|KLUE-RoBERTa-base|Fixed-Parameter|0.71893|0.69808|
-|**Model #8**|KLUE-RoBERTa-large|Fixed-Parameter|---|---|
-|**Model #9**|XLM-RoBERTa-large|Fixed-Parameter|0.63074|0.60900|
-|**Model #10**|KoELECTRA-small-v3-discriminator|Fixed-Parameter|---|---|  
-|**Model #11**|KoELECTRA-base-v3-discriminator|Fixed-Parameter|---|---|  
+|**Model #4**|KoBERT/monologg|Fixed-Parameter|0.67256|0.66650|
+|**Model #5**|RoBERTa-base|Fixed-Parameter|0.59196|0.56519|
+|**Model #6**|KLUE-RoBERTa-base|Fixed-Parameter|0.71893|0.69808|
+|**Model #7**|KLUE-RoBERTa-large|Fixed-Parameter|---|---|
+|**Model #8**|XLM-RoBERTa-large|Fixed-Parameter|0.63074|0.60900|
+|**Model #9**|KoELECTRA-small-v3-discriminator|Fixed-Parameter|---|---|  
+|**Model #10**|KoELECTRA-base-v3-discriminator|Fixed-Parameter|---|---|  
 
 
 - ***uncased**: it does not make a difference between english and English.  
