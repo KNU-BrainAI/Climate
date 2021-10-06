@@ -128,7 +128,7 @@ BERT와 같은 프리트레인 모델은 NLP Tasks의 성능을 끌어올리는 
 
 
 
-**2.3. Computation methods + hyperparameters**
+**2.3. Computation methods + hyperparameters + Evaluation Method, Public and Private Score**
 
 
 - Fixed-Parameter
@@ -144,7 +144,7 @@ metric = tf.keras.metrics.SparseCategoricalAccuracy('accuracy')
 ```
 
 
-**2.4. Evaluation Method, Public and Private Score** 
+
 
 
 
