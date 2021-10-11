@@ -18,6 +18,7 @@ Climate Description! 😁🤞
 
 ICT Express https://www.journals.elsevier.com/ict-express
 
+<!--
 ## 포맷 참고 논문(은찬, In ICT EXPRESS)
 - [A comparative study of LPWAN technologies for large-scale IoT deployment](https://www.sciencedirect.com/science/article/pii/S2405959517302953)
 
@@ -29,7 +30,7 @@ ICT Express https://www.journals.elsevier.com/ict-express
 ---
 
 ## 1. INTRODUCTION (연구 소개)  
-<!--
+
 **1.1 Deep Learning**  
 
 
@@ -91,7 +92,6 @@ Word Embedding 기법을 통해서 자연어의 연관관계를 벡터로 나타
 - ELECTRA 
 - 
 
--->
 **⭐ Objective (연구 목적)**  
 
 BERT와 같은 프리트레인 모델은 NLP Tasks의 성능을 끌어올리는 데에 공헌을 하였
@@ -186,4 +186,4 @@ metric = tf.keras.metrics.SparseCategoricalAccuracy('accuracy')
 (Professor: 이게 길어야 좋은 논문이다..)
 ㅠㅠㅠ
 
-
+-->
