@@ -7,7 +7,7 @@
 ## Pre-Processing 
 
 - 12 Train columns 중 4가지 '과제명', '요약문_한글키워드', '요약문_연구목표', 'label' 사용 
-- **Mecab Tokenizer**를 통해 형태소 단위 분절 후 **명사형태만 추출하는 방식**을 최종 적용
+- **Mecab Tokenizer**를 통해 형태소 단위 분절 후 **Nouns: 명사형태만 추출하는 방식**을 최종 적용
 
 <img src="images/after_preproc.PNG">
 
@@ -30,12 +30,13 @@
 
 ***uncased**: it does not make a difference between english and English.  
 
+<!--
 **Ensemble Models**  
 |Filename|Model|설명|F1 스코어|
 |------|------|---|---|
 |**앙상블 Model1**|?|Fixed-Parameter|---|
 |**앙상블 Model2**|?|Fixed-Parameter|---|
-
+-->
 
 ## Hyperparameters (Fixed)
 
