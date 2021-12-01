@@ -1,86 +1,53 @@
-# Climate  
+## Final-Result 
+
+--- 
 
 
 
-### 소개 
+## Pre-Processing 
 
-[Climate Technology 데이콘 경진대회](https://dacon.io/competitions/official/235744/overview/description)
+- 12 Train columns 중 4가지 '과제명', '요약문_한글키워드', '요약문_연구목표', 'label' 사용 
+- **Mecab Tokenizer**를 통해 형태소 단위 분절 후 **명사형태만 추출하는 방식**을 최종 적용
 
-
-### 최종 결과 
-
-To Be Updated .. 
-
-
-### Members 
-
-|이름|Github|
-|:---|:---|
-|이창현|[@2changhyeon](https://github.com/2changhyeon)|
-|이은찬|[@purang2](https://github.com/purang2)|
- 
-
-### Works 
-
-**Model**   
-1. BERT     
-2. KoBERT  
-3. KoElectra  
-4. RoBERTa-Large  
-
-
-**전처리**   
-1. Mecab 
-2. BERT-Tokenizer
-3. KoBERT-Tokenizer
-4. RoBERTa-Tokenizer 
-
-
-**전략**
-1. Imbalanced Data → Oversampling  
-2. Imbalanced Data → Focal Loss  
-3. 한국어 데이터 Preprocessing → Mecab + re.sub()  
-4. 2단 분류 (0과 0이 아닌것 분류 +0이 아닌것들 재분류) 
-5. 다양한 NLP 고성능 모델 적용  
-6. Multi-GPU 사용 (tensorflow.distribute.MirroredStrategy)  
-7. To Be Updated..
+<img src="images/after_preproc.PNG">
 
 
 
+## Models 
+
+**Single Models**  
+|Filename|Model|Details|Macro F1|
+|------|------|---|---|
+|**Model1**|BERT-base-Multilingual-cased|Fixed-Parameter|0.64159|
+|**Model2**|BERT-base-Multilingual-uncased|Fixed-Parameter|---|
+|**Model3**|KoBERT/monologg|Fixed-Parameter|0.66650|
+|**Model4**|KLUE-RoBERTa-large|Fixed-Parameter|---|
+|**Model5**|KLUE-RoBERTa-base|Fixed-Parameter|---|
+|**Model6**|KLUE-BERT-base|Fixed-Parameter|---|
+|**Model7**|KoELECTRA-base-v3-discriminator|Fixed-Parameter|---|  
+|**Model9**|SKT-KoBERT(cased)|Fixed-Parameter|---|
 
 
-### Requirements (Packages)
+***uncased**: it does not make a difference between english and English.  
 
-```python
-# it's Our version!  
-cudatoolkit==11.3.1  
-cudnn==8.2.1
-python==3.8.0
-pytorch==1.9.0 
-tensorflow-gpu==2.5.0
-koNLPy==0.5.2
-tqdm
-transformers==4.8.2
-spyder==5.0.5  
+**Ensemble Models**  
+|Filename|Model|설명|F1 스코어|
+|------|------|---|---|
+|**앙상블 Model1**|?|Fixed-Parameter|---|
+|**앙상블 Model2**|?|Fixed-Parameter|---|
+
+
+## Hyperparameters (Fixed)
+
+```(python)
+NUM_EPOCHS = 10
+VALID_SPLIT = 0.2
+MAX_LEN=96
+
+optimizer = tf.keras.optimizers.Adam(3e-5)
+loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+metric = tf.keras.metrics.SparseCategoricalAccuracy('accuracy')
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Examples (공부했던 예제 기록) 
-
-1. [First Name('성')을 분석하여 어느 나라 출신인지 예측하는 모델](https://tutorials.pytorch.kr/intermediate/char_rnn_classification_tutorial.html)  
-2. [뉴스 기사 문장을 [1. 세계, 2.스포츠 3. 경제 4. 과학] 분류하기 , Pytorch TorchText 사용](https://tutorials.pytorch.kr/beginner/text_sentiment_ngrams_tutorial.html)  
-3. [Kaggle 악플 분석 챌린지](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/code)  
 
 
 
