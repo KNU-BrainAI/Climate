@@ -18,16 +18,24 @@
 ## Models 
 
 **Single Models**  
-|Filename|Model|Details|Macro F1|
-|------|------|---|---|
-|**Model1**|BERT-base-Multilingual-cased|Fixed-Parameter|0.64159|
-|**Model2**|BERT-base-Multilingual-uncased|Fixed-Parameter|---|
-|**Model3**|KoBERT/monologg|Fixed-Parameter|0.66650|
-|**Model4**|KLUE-RoBERTa-large|Fixed-Parameter|---|
-|**Model5**|KLUE-RoBERTa-base|Fixed-Parameter|---|
-|**Model6**|KLUE-BERT-base|Fixed-Parameter|---|
-|**Model7**|KoELECTRA-base-v3-discriminator|Fixed-Parameter|---|  
-|**Model9**|SKT-KoBERT(cased)|Fixed-Parameter|---|
+|Filename|Model|Pretrain Detail|Val Score|Test Score|
+|------|------|---|---|---|
+|**Model1**|BERT-base-Multilingual-cased|multi-lingual based|0.65|0.64|
+|**Model2**|BERT-base-Multilingual-uncased|multi-lingual based|0.71|0.68|
+|**Model3**|KLUE-BERT-base|Korean based|0.74|0.72|
+|**Model4**|SKT/KoBERT|Korean based|0.67|0.67|
+|**Model5**|RoBERTa-base|Only English based|0.59|0.57|
+|**Model6**|KLUE-RoBERTa-base|Korean based|0.72|0.70|
+|**Model7**|XLM-RoBERTa-base|Cross-lingual & multi-lingual based|0.63|0.61|
+
+![zx](https://user-images.githubusercontent.com/46081500/144213483-9884c7be-57de-419e-8745-2bbac59307f9.PNG)
+
+**not yet**
+
+|**Model8**|KoELECTRA-base|Fixed-Parameter|---|---|  
+|**Model9**|KLUE-RoBERTa-Large|Fixed-Parameter|---|---|  
+|**Model10**|TBD|Fixed-Parameter|---|---|    
+
 
 
 ***uncased**: it does not make a difference between english and English.  
